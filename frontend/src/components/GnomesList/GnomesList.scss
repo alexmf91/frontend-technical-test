@@ -1,0 +1,70 @@
+@import "../../sass/partials/reset";
+
+.gnomes-list-container {
+  background-color: bisque;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    background-color: blue;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  input {
+    width: 15rem;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: solid 1px gray;
+  }
+  &__gnomes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: fit-content;
+    background-color: coral;
+    margin: 0 auto;
+    padding: 3rem;
+    .gnomes-list__gnome {
+      background-color: cornsilk;
+      display: flex;
+      list-style: none;
+      margin: 1rem;
+      width: 12rem;
+      padding: 10px;
+      border-radius: 10px;
+      .gnome__details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      span {
+        font-weight: 300;
+        color: lightslategrey;
+        padding: 0 10px;
+        text-align: center;
+        font-size: small;
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        padding: 5px;
+        button {
+          margin: 0 auto;
+          padding: 2px 5px;
+          font-size: 10px;
+          color: white;
+          background-color: lightslategrey;
+          border-radius: 15px;
+          border: solid 1px gray;
+          align-items: flex-end;
+          &:hover {
+            background-color: hotpink;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
