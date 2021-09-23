@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import loadGnomes from '../../redux/actions/creators/gnomes';
 
 export default function GnomesList() {
@@ -14,7 +15,9 @@ export default function GnomesList() {
       <ul>
         {gnomesList?.map((gnome) => (
           <li key={gnome.id}>
-            {gnome.name}
+            <Link to={`${gnome.id}`}>
+              {gnome.name}
+            </Link>
           </li>
         ))}
       </ul>

@@ -5,7 +5,6 @@ export default function loadGnomes() {
   return async (dispatch) => {
     const { data } = await axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json');
     const { Brastlewark } = data;
-    console.log(Brastlewark);
     dispatch({
       type: actionTypesGnomes.LOAD_GNOMES,
       gnomes: Brastlewark
