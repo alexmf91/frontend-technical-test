@@ -1,19 +1,13 @@
 @import "../../sass/partials/reset";
 
 .gnomes-list-container {
-  background-color: bisque;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  h1 {
-    background-color: blue;
-    width: fit-content;
-    margin: 0 auto;
-  }
   input {
     width: 15rem;
-    margin: 1.5rem auto;
+    margin: 3rem auto 0;
     padding: 1rem;
     border-radius: 1.5rem;
     border: solid 1px gray;
@@ -23,7 +17,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: fit-content;
-    background-color: coral;
     margin: 0 auto;
     padding: 3rem;
     .gnomes-list__gnome {
@@ -31,20 +24,24 @@
       display: flex;
       list-style: none;
       margin: 1rem;
-      width: 12rem;
+      width: 13rem;
+      height: 6rem;
       padding: 10px;
       border-radius: 10px;
       .gnome__details {
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-      span {
-        font-weight: 300;
-        color: lightslategrey;
-        padding: 0 10px;
-        text-align: center;
-        font-size: small;
+        span {
+          display: flex;
+          font-weight: 300;
+          color: lightslategrey;
+          padding: 0 10px;
+          text-align: center;
+          align-items: center;
+          font-size: small;
+          height: 75%;
+        }
       }
       a {
         text-decoration: none;
