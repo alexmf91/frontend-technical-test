@@ -1,0 +1,75 @@
+.details-page {
+  background-image: url(https://cdn.domestika.org/c_limit,dpr_1.0,f_auto,q_auto,w_820/v1381758153/content-items/000/428/261/setas_final3-original.jpg?1381758153);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 4rem 0 5rem;
+}
+.gnome-details {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 2rem auto;
+  padding: 2rem 3rem;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  justify-content: center;
+  font-family: monospace;
+  border-radius: 1.3rem;
+  border: 5px solid green;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  .gnome-details__main-info {
+    padding: 2rem 0 0;
+  }
+  .main-info__name-and-age {
+    border: 2px solid rgb(46, 45, 45);
+    padding: 5px;
+    span {
+      color: lightslategrey;
+    }
+  }
+  .main-info__friends-and-professions {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    ul {
+      margin: 10px auto;
+      padding: 1rem;
+      background-color: rgb(237, 238, 236);
+      width: 16rem;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      h3 {
+        padding: 0.3rem 0;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      li {
+        list-style: none;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0.3rem 0;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .gnome-details {
+    flex-direction: row;
+    .gnome-details__main-info {
+      padding-left: 3rem;
+      justify-content: space-between;
+    }
+    .main-info__friends-and-professions {
+      flex-direction: row;
+      ul {
+        width: 12rem;
+        margin: 10px;
+      }
+    }
+  }
+}
