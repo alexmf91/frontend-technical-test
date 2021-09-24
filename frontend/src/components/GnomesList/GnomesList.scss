@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 80vh;
   input {
     width: 15rem;
     margin: 3rem auto 0;
@@ -19,8 +20,22 @@
     width: fit-content;
     margin: 0 auto;
     padding: 3rem;
+    .gnomes-list__no-found-gnome {
+      display: flex;
+      height: 10rem;
+      width: 100%;
+      padding: 2rem;
+      background-color: rgb(0, 0, 0);
+      p {
+        color: whitesmoke;
+        font-family: monospace;
+      }
+    }
     .gnomes-list__gnome {
       background-color: cornsilk;
+      background-image: url(https://previews.123rf.com/images/tokhiti/tokhiti2003/tokhiti200300037/141624780-cute-little-nordic-gnome-seamless-pattern-christmas-and-new-year-characters-vector-illustration-hand.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       list-style: none;
       margin: 1rem;
@@ -32,7 +47,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 15px;
         span {
+          background-color: whitesmoke;
+          border: solid 1px gray;
+          border-radius: 10px;
           display: flex;
           font-weight: 300;
           color: lightslategrey;
@@ -52,12 +71,12 @@
           padding: 2px 5px;
           font-size: 10px;
           color: white;
-          background-color: lightslategrey;
+          background-color: rgb(75, 177, 75);
           border-radius: 15px;
           border: solid 1px gray;
           align-items: flex-end;
           &:hover {
-            background-color: hotpink;
+            background-color: rgb(33, 146, 43);
             cursor: pointer;
           }
         }
