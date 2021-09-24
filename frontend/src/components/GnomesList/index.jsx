@@ -23,15 +23,14 @@ export default function GnomesList() {
 
   return (
     <main className="gnomes-list-container">
-      <h1>Gnomes List</h1>
       <input type="text" name="name" onChange={handleChange} placeholder="Find a gnome" />
       <ul className="gnomes-list-container__gnomes-list">
         {filteredGnomesList?.map((gnome) => (
           <li className="gnomes-list__gnome" key={`${gnome.id}`}>
             <Avatar
               picture={gnome?.thumbnail}
-              width={60}
-              height={60}
+              width={70}
+              height={70}
             />
             <div className="gnome__details">
               <span>
