@@ -25,23 +25,25 @@ export default function GnomesList() {
     <main className="gnomes-list-container" data-testid="gnomes-list-container">
       <input type="text" name="name" onChange={handleChange} placeholder="Find a gnome" data-testid="filter-input" />
       <ul className="gnomes-list-container__gnomes-list">
-        {filteredGnomesList?.map((gnome) => (
-          <li className="gnomes-list__gnome" data-testid={`${gnome.name}`} key={`${gnome.id}`}>
-            <Avatar
-              picture={gnome?.thumbnail}
-              width={70}
-              height={70}
-            />
-            <div className="gnome__details">
-              <span>
-                {gnome?.name}
-              </span>
-              <Link to={`${gnome.id}`}>
-                <button type="button">Details</button>
-              </Link>
-            </div>
-          </li>
-        ))}
+        {filteredGnomesList?.length === 0
+          ? <div className="gnomes-list__no-found-gnome"><p>Sorry, any gnome with that name has been found</p></div>
+          : filteredGnomesList?.map((gnome) => (
+            <li className="gnomes-list__gnome" data-testid={`${gnome.name}`} key={`${gnome.id}`}>
+              <Avatar
+                picture={gnome?.thumbnail}
+                width={70}
+                height={70}
+              />
+              <div className="gnome__details">
+                <span>
+                  {gnome?.name}
+                </span>
+                <Link to={`${gnome.id}`}>
+                  <button type="button">Details</button>
+                </Link>
+              </div>
+            </li>
+          ))}
       </ul>
     </main>
   );
