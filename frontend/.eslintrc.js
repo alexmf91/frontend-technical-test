@@ -8,12 +8,17 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb'
   ],
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react']
+    }
   },
   plugins: [
     'react'
