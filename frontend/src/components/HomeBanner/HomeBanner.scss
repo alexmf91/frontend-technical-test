@@ -1,0 +1,23 @@
+.home-banner {
+  background-color: rgba(245, 245, 245, 0.336);
+  display: flex;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    padding: 1rem;
+    color: whitesmoke;
+    font-family: monospace;
+    text-align: center;
+  }
+  height: 13rem;
+}
+@media screen and(min-width: 768px) {
+  .home-banner {
+    p {
+      font-size: 45px;
+    }
+    height: 17rem;
+  }
+}
