@@ -4,15 +4,19 @@ import {
 } from 'react-router-dom';
 import Details from './views/Details';
 import Home from './views/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/:gnomeId" component={Details} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   );
