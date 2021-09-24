@@ -12,6 +12,9 @@
   margin: 2rem auto;
   padding: 2rem 3rem;
   background-color: rgb(255, 255, 255);
+  background-image: url(https://previews.123rf.com/images/tokhiti/tokhiti2003/tokhiti200300037/141624780-cute-little-nordic-gnome-seamless-pattern-christmas-and-new-year-characters-vector-illustration-hand.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: fit-content;
   justify-content: center;
   font-family: monospace;
@@ -24,6 +27,7 @@
   }
   .main-info__name-and-age {
     border: 2px solid rgb(46, 45, 45);
+    background-color: honeydew;
     padding: 5px;
     span {
       color: lightslategrey;
