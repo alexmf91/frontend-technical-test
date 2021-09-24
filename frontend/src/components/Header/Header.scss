@@ -1,0 +1,17 @@
+header {
+  background-color: rgb(0, 0, 0);
+  height: 4rem;
+  font-family: monospace;
+  a {
+    display: flex;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    color: white;
+    img{
+        width: 40px;
+        height: 40px;
+    }
+  }
+}
