@@ -1,10 +1,10 @@
 import React from 'react';
 import GnomesList from '../../components/GnomesList';
+import './Home.scss';
 
 export default function Home() {
   return (
-    <main>
-      <h1>Home Page</h1>
+    <main className="home-page">
       <GnomesList />
     </main>
   );
