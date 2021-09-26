@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/:gnomeId" component={Details} />
+          <Route path="/details/:gnomeId" component={Details} />
         </Switch>
         <Footer />
       </BrowserRouter>

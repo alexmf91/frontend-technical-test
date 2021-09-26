@@ -36,7 +36,7 @@ export default function Home() {
           <div className="main-info__friends-and-professions">
             <ul className="friends-and-professions__friends">
               <h3>Friends</h3>
-              {currentGnome.friends?.length === 0
+              {currentGnome?.friends?.length === 0
                 ? <p>{`${currentGnome.name} don't have friends yet`}</p>
                 : currentGnome?.friends?.map((friend) => (
                   <li key={friend}>
@@ -46,7 +46,7 @@ export default function Home() {
             </ul>
             <ul className="friends-and-professions__professions">
               <h3>Professions</h3>
-              {currentGnome.professions?.length === 0
+              {currentGnome?.professions?.length === 0
                 ? <p>{`${currentGnome.name} don't have profession yet`}</p>
                 : currentGnome?.professions?.map((profession) => (
                   <li key={profession}>

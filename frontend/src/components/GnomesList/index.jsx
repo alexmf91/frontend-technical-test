@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -11,14 +12,17 @@ export default function GnomesList() {
   const [filteredGnomesList, setFilteredGnomesList] = useState([]);
   const [inputValue, setInputValue] = useState('');
   function handleChange(input) {
-    setInputValue(input.target.value);
+    setInputValue(input?.target?.value);
+  }
+  function handleRoute(gnomeRoute) {
+    return `details/${gnomeRoute}`
   }
   useEffect(() => {
     dispatch(loadGnomes());
   }, []);
   useEffect(() => {
     setFilteredGnomesList(gnomesList
-      .filter((gnome) => gnome.name.toLowerCase().includes(inputValue.toLowerCase())));
+      .filter((gnome) => gnome?.name?.toLowerCase().includes(inputValue.toLowerCase())));
   }, [inputValue, gnomesList]);
 
   return (
@@ -28,7 +32,7 @@ export default function GnomesList() {
         {filteredGnomesList?.length === 0
           ? <div className="gnomes-list__no-found-gnome"><p>Sorry, any gnome with that name has been found</p></div>
           : filteredGnomesList?.map((gnome) => (
-            <li className="gnomes-list__gnome" data-testid={`${gnome.name}`} key={`${gnome.id}`}>
+            <li className="gnomes-list__gnome" data-testid={gnome.name} key={gnome.id}>
               <Avatar
                 picture={gnome?.thumbnail}
                 width={70}
@@ -38,7 +42,7 @@ export default function GnomesList() {
                 <span>
                   {gnome?.name}
                 </span>
-                <Link to={`${gnome.id}`}>
+                <Link to={handleRoute(gnome?.id)}>
                   <button type="button">Details</button>
                 </Link>
               </div>

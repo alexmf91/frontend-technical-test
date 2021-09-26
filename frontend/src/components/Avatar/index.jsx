@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
@@ -16,7 +17,7 @@ export default function ImageAvatars({ picture, width, height }) {
 }
 
 ImageAvatars.propTypes = {
-  picture: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired
+  picture: PropTypes.string,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired
 };
